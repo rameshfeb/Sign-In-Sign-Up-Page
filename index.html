@@ -1,0 +1,98 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login and Registration Form with HTML5 and CSS3</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="validation.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Login and Registration Form</h1>
+
+    </header>
+    <section>
+        <div id="container_demo" >
+
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form  name = "signin" onsubmit="return loginvalidation()" method="post" autocomplete="off">
+                        <h1>Log in</h1>
+                        <p>
+                            <label for="username" class="uname" > Your Email </label>
+                            <input id="username" name="username" type="text" placeholder="Enter Your Mail-id Here"/>
+                            <span id ="usernameerrorsignin"></span>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd"> Your password </label>
+                            <input id="password" name="password" type="password" placeholder="Type Your Password" />
+                            <span id="passworderrorsignin"></span>
+                        </p>
+                        <p class="keeplogin">
+                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+                            <label for="loginkeeping">Keep me logged in</label>
+                        </p>
+                        <p class="signin button">
+                            <input type="submit" value="Sign in"/>
+                        </p>
+                        <p class="change_link">
+                            Not a member yet ?
+                            <a href="#toregister" class="to_register">Join us</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div id="register" class="animate form">
+                    <form name="signup" onsubmit="return validation()" method="post" autocomplete="off">
+                        <h1> Sign up </h1>
+                        <p>
+                            <label for="usernamesignup" class="uname">Your username</label>
+                            <input id="usernamesignup" name="usernamesignup" type="text" placeholder="User Name" autocomplete="off"/>
+                            <span id ="usernameerror"></span>
+                        </p>
+                        <p>
+                            <label for="emailsignup" class="youmail">Your email</label>
+                            <input id="emailsignup" name="emailsignup" type="email" placeholder="Enter Your Mail-id" autocomplete="off"/>
+                            <span id ="useremailerror"></span>
+                        </p>
+                        <p>
+                            <label for="dobsignup">Your DOB</label>
+                            <input id="dobsignup" name="dobsignup" type="date" placeholder="Choose Your DOB" autocomplete="off"/>
+                            <span id ="doberror"></span>
+                        </p>
+                        <p>
+                            <label for="passwordsignup" class="youpasswd" >Your password </label>
+                            <input id="passwordsignup" name="passwordsignup" type="password" placeholder="Type Your Password" autocomplete="off"/>
+                            <span id ="passworderror"></span>
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+                            <input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="Retype Your Password" autocomplete="off"/>
+                            <span id="cnfpassworderror"></span>
+                        </p>
+                        <p class="signin button">
+                            <input type="submit" value="Sign up"/>
+                        </p>
+                        <p class="change_link">
+                            Already a member ?
+                            <a href="#tologin" class="to_register">Go and log in </a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
